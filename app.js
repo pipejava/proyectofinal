@@ -13,26 +13,26 @@ const puerto = process.env.PORT;
 
 // para mostrar los archivos de la carpeta public, utiliza metodo use
 
-app.use(express.static('public'));
+app.use(express.static('publico'));
 
 // para crear las rutas de las páginas web, se utiliza el metodo get
 
 app.get('/left-sidebar', (req, res) => {
     // res, para dar una repuesta de petición al usuario
-    res.sendFile(__dirname + '/public/left-sidebar.html');
+    res.sendFile(__dirname + '/publico/left-sidebar.html');
 })
 app.get('/no-sidebar', (req, res) => {
     // res, para dar una repuesta de petición al usuario
-    res.sendFile(__dirname + '/public/no-sidebar.html');
+    res.sendFile(__dirname + '/publico/no-sidebar.html');
 })
 app.get('/right-sidebar', (req, res) => {
     // res, para dar una repuesta de petición al usuario
-    res.sendFile(__dirname + '/public/right-sidebar.html');
+    res.sendFile(__dirname + '/publico/right-sidebar.html');
 })
 app.get('*', (req, res) => {
     // el comidin o *, en éste caso, si la pagina no existe, va a retornar 404.html 
 
-    res.sendFile(__dirname + '/public/404.html');
+    res.sendFile(__dirname + '/publico/404.html');
 })
 
 // activar el puerto para el webserver con un listen, con una función de flecha
